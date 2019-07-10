@@ -1,0 +1,35 @@
+# 	This is a no OS project, which fit to s3c2440.
+#
+#	Ding Guanliang, Software Engineering, Guanliangding@gmail.com.
+#
+#	Directory hierarchy refer to u-boot.
+
+Directory Hierarchy:
+====================
+
+/include	Header Files.
+/lib		Files generic to all architectures.
+/common		Misc architecture independent functions.
+/arch		Architecture specific files.
+	/arm		ARM platform files.
+		/cpu		CPU specific files.
+			/arm920t	Files specific to ARM 920 CPUs.
+		/lib		Architecture specific library files.
+/board		Board dependent files.
+/drivers	Commonly used device drivers.
+/fs			Filesystem code (cramfs, ext2, jffs2, etc.).
+/disk		Code for disk drive partition handling.
+/net		Networking code.
+/api		Machine/arch independent API for external apps.
+
+file type explain:
+====================
+
+/config.mk:		a file for make tool to offer some parameter.
+/rules.mk:		a file for make tool to generation depend.
+/Makefile: 		a file for make tool to offer compile rules.
+/readme: 		a file for reader to simply understand this project.
+*/*.h: 			a file for gcc to offer headers.
+*/*.S: 			a file for as to offer assembly file.
+*/*.c: 			a file for gcc to offer c language file.
+*/link.lds: 	a file for ld to offer link script file.
